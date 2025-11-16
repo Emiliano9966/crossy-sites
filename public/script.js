@@ -3,16 +3,25 @@ const allGames = [
         name: "Capybara Clicker",
         image: "/img/cappyclicker.png",
         html: "/games/cappyclicker.html"
+    },
+    {
+        name: "BitLife",
+        image: "/img/bitlife.png",
+        html: "/games/bitlife.html"
+    },
+    {
+        name: "Drift Boss",
+        image: "/img/driftboss.png",
+        html: "/games/driftboss.html"
     }
-    // add more games here
 ];
 
-// Example continue-playing (you can fill using localStorage if u want)
 const continuePlaying = [
     allGames[0],
     allGames[1]
 ];
 
+// Populate card rows
 function populateRow(rowId, games) {
     const row = document.getElementById(rowId);
 
@@ -25,7 +34,9 @@ function populateRow(rowId, games) {
             <div class="card-title">${g.name}</div>
         `;
 
-        card.onclick = () => window.location = g.html;
+        // Open game viewer instead of navigating
+        card.onclick = () => openGame(g.html);
+
         row.appendChild(card);
     });
 }
@@ -33,3 +44,16 @@ function populateRow(rowId, games) {
 populateRow("continue-row", continuePlaying);
 populateRow("all-row", allGames);
 
+// GAME VIEWER FUNCTIONS
+function openGame(path) {
+    document.getElementById("game-frame").src = path;
+    document.getElementById("game-viewer").style.display = "flex";
+
+    // Scroll to viewer
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+}
+
+document.getElementById("back-button").onclick = () => {
+    document.getElementById("game-viewer").style.display = "none";
+    document.getElementById("game-frame").src = "";
+};
