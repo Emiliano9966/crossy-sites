@@ -3,16 +3,6 @@ const allGames = [
         name: "Capybara Clicker",
         image: "/img/cappyclicker.png",
         html: "/games/cappyclicker.html"
-    },
-    {
-        name: "BitLife",
-        image: "/img/bitlife.png",
-        html: "/games/bitlife.html"
-    },
-    {
-        name: "Drift Boss",
-        image: "/img/driftboss.png",
-        html: "/games/driftboss.html"
     }
     // add more games here
 ];
@@ -42,3 +32,4 @@ function populateRow(rowId, games) {
 
 populateRow("continue-row", continuePlaying);
 populateRow("all-row", allGames);
+
