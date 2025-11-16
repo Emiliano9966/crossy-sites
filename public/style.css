@@ -6,17 +6,14 @@ body {
     color: #fff;
 }
 
-
-/* Row Titles */
+/* Titles */
 .section-title {
     font-size: 22px;
     font-weight: 300;
     margin: 25px 5px 10px 5px;
 }
 
-
-
-/* Horizontal scroll row */
+/* Horizontal scroll rows */
 .row {
     display: flex;
     overflow-x: auto;
@@ -29,7 +26,7 @@ body {
     display: none;
 }
 
-/* Game Card Style */
+/* Game Card */
 .card {
     min-width: 165px;
     height: 105px;
@@ -44,7 +41,6 @@ body {
 
 .card:hover {
     transform: scale(1.06);
-    border-radius: 16px;
 }
 
 .card img {
@@ -53,15 +49,42 @@ body {
     object-fit: cover;
 }
 
-/* Title overlay (bottom fade like screenshot) */
+/* Title overlay on card */
 .card-title {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 6px 10px;
     font-size: 13px;
-    font-weight: 600;
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
 }
 
+/* Game Viewer */
+#game-viewer {
+    margin-top: 25px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
 
+#back-button {
+    width: 100px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+}
+
+#back-button:hover {
+    background: #444;
+}
+
+#game-frame {
+    width: 100%;
+    height: 600px;
+    border-radius: 16px;
+    background: #000;
+}
