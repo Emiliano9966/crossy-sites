@@ -1,16 +1,31 @@
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
 
+    <!-- Fredoka One font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
-<h2 class="section-title">Continue Playing</h2>
-<div class="row" id="continue-row"></div>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<h2 class="section-title">All Games</h2>
-<div class="row" id="all-row"></div>
+    <h2 class="section-title">Continue Playing</h2>
+    <div class="row" id="continue-row"></div>
 
+    <h2 class="section-title">All Games</h2>
+    <div class="row" id="all-row"></div>
 
-<script src="script.js"></script>
+    <!-- Game Viewer -->
+    <div id="game-viewer">
+        <button id="back-button">⟵ Back</button>
+        <iframe id="game-frame" src="" frameborder="0"></iframe>
+    </div>
 
-
+    <script src="script.js"></script>
+</body>
+</html>
