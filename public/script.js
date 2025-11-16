@@ -1,46 +1,54 @@
-const allGames = [
+// Your games list
+const games = [
     {
         name: "Capybara Clicker",
-        image: "/img/cappyclicker.png",
-        html: "/games/cappyclicker.html"
+        thumb: "img/cappyclicker.png",
+        url: "games/cappyclicker.html"
     }
 ];
 
-// Continue Playing (only include existing items)
-const continuePlaying = [
-    allGames[0]
-];
+// Build game cards automatically
+window.onload = () => {
+    const container = document.getElementById("gameContainer");
 
-// Populate card rows
-function populateRow(rowId, games) {
-    const row = document.getElementById(rowId);
-
-    games.forEach(g => {
+    games.forEach(game => {
         const card = document.createElement("div");
-        card.className = "card";
+        card.className = "game-card";
+        card.onclick = () => openGame(game.name, game.url, game.thumb);
 
         card.innerHTML = `
-            <img src="${g.image}">
-            <div class="card-title">${g.name}</div>
+            <img src="${game.thumb}" />
+            <span>${game.name}</span>
         `;
 
-        card.onclick = () => openGame(g.html);
-        row.appendChild(card);
+        container.appendChild(card);
+    });
+};
+
+// Open game screen
+function openGame(name, url, icon) {
+    document.getElementById("gameList").style.display = "none";
+    document.getElementById("gameScreen").style.display = "block";
+
+    document.getElementById("gameTitle").innerText = name;
+    document.getElementById("bottomIcon").src = icon;
+    document.getElementById("gameFrame").src = url;
+
+    // Sidebar population
+    const side = document.getElementById("sidebarGames");
+    side.innerHTML = "";
+
+    games.forEach(g => {
+        const img = document.createElement("img");
+        img.src = g.thumb;
+        img.onclick = () => openGame(g.name, g.url, g.thumb);
+        side.appendChild(img);
     });
 }
 
-populateRow("continue-row", continuePlaying);
-populateRow("all-row", allGames);
-
-// GAME VIEWER FUNCTIONS
-function openGame(path) {
-    document.getElementById("game-frame").src = path;
-    document.getElementById("game-viewer").style.display = "flex";
-
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+// Close game
+function closeGame() {
+    document.getElementById("gameScreen").style.display = "none";
+    document.getElementById("gameList").style.display = "block";
+    document.getElementById("gameFrame").src = "";
 }
-
-document.getElementById("back-button").onclick = () => {
-    document.getElementById("game-viewer").style.display = "none";
-    document.getElementById("game-frame").src = "";
-};
