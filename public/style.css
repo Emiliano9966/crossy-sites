@@ -2,9 +2,10 @@ body {
     margin: 0;
     padding: 20px;
     background: #0f0f0f;
-    font-family: "Inter", Arial, sans-serif;
+    font-family: "Fredoka One", Arial, sans-serif;
     color: #fff;
 }
+
 
 /* Row Titles */
 .section-title {
@@ -66,3 +67,4 @@ body {
     font-weight: 600;
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
 }
+
