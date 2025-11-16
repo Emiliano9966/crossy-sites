@@ -1,31 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Hub</title>
+<link rel="stylesheet" href="style.css" />
 
-    <!-- Fredoka One font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<!-- Nunito -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
 
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
+<div id="gameList">
+  <h1 class="title">Games</h1>
 
-    <h2 class="section-title">Continue Playing</h2>
-    <div class="row" id="continue-row"></div>
+  <!-- JS will auto-fill this -->
+  <div class="game-grid" id="gameContainer"></div>
+</div>
 
-    <h2 class="section-title">All Games</h2>
-    <div class="row" id="all-row"></div>
+<!-- FULLSCREEN GAME VIEW -->
+<div id="gameScreen" style="display:none;">
+  <button class="back-btn" onclick="closeGame()">← Back</button>
 
-    <!-- Game Viewer -->
-    <div id="game-viewer">
-        <button id="back-button">⟵ Back</button>
-        <iframe id="game-frame" src="" frameborder="0"></iframe>
+  <div class="game-layout">
+    <div class="game-frame-wrapper">
+      <iframe id="gameFrame" allowfullscreen></iframe>
     </div>
 
-    <script src="/script.js"></script>
-</body>
-</html>
+    <div class="sidebar" id="sidebarGames"></div>
+  </div>
+
+  <div class="bottom-info">
+    <img id="bottomIcon" />
+    <div class="info-text">
+      <h2 id="gameTitle"></h2>
+      <span class="category">Game</span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
