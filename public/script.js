@@ -9,7 +9,24 @@ const games = [
         name: "Monkey Mart",
         thumb: "img/monkeymart.webp",
         url: "games/monkeymart.html"
+    },
+            {
+        name: "Retro Bowl",
+        thumb: "img/retrobowl.png",
+        url: "games/retrobowl.html"
+    },
+                {
+        name: "Ragdoll Archers",
+        thumb: "img/arc.png",
+        url: "games/arc.html"
+    },
+                {
+        name: "Basket Random",
+        thumb: "img/bsr.png",
+        url: "games/bsr.html"
     }
+    
+    
 ];
 
 // Build game cards automatically
@@ -57,4 +74,3 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
-
