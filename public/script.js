@@ -4,6 +4,11 @@ const games = [
         name: "Capybara Clicker",
         thumb: "img/cappyclicker.png",
         url: "games/cappyclicker.html"
+    },
+        {
+        name: "Monkey Mart",
+        thumb: "img/monkeymart.webp",
+        url: "games/monkeymart.html"
     }
 ];
 
@@ -52,3 +57,4 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
