@@ -1,18 +1,8 @@
 const allGames = [
     {
         name: "Capybara Clicker",
-        image: "/img/cappyclicker.png",
-        html: "/games/cappyclicker.html"
-    },
-    {
-        name: "BitLife",
-        image: "/img/bitlife.png",
-        html: "/games/bitlife.html"
-    },
-    {
-        name: "Drift Boss",
-        image: "/img/driftboss.png",
-        html: "/games/driftboss.html"
+        image: "img/cappyclicker.png",
+        html: "games/cappyclicker.html"
     }
 ];
 
@@ -57,3 +47,4 @@ document.getElementById("back-button").onclick = () => {
     document.getElementById("game-viewer").style.display = "none";
     document.getElementById("game-frame").src = "";
 };
+
