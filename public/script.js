@@ -1,14 +1,14 @@
 const allGames = [
     {
         name: "Capybara Clicker",
-        image: "img/cappyclicker.png",
-        html: "games/cappyclicker.html"
+        image: "/img/cappyclicker.png",
+        html: "/games/cappyclicker.html"
     }
 ];
 
+// Continue Playing (only include existing items)
 const continuePlaying = [
-    allGames[0],
-    allGames[1]
+    allGames[0]
 ];
 
 // Populate card rows
@@ -24,9 +24,7 @@ function populateRow(rowId, games) {
             <div class="card-title">${g.name}</div>
         `;
 
-        // Open game viewer instead of navigating
         card.onclick = () => openGame(g.html);
-
         row.appendChild(card);
     });
 }
@@ -39,7 +37,6 @@ function openGame(path) {
     document.getElementById("game-frame").src = path;
     document.getElementById("game-viewer").style.display = "flex";
 
-    // Scroll to viewer
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 }
 
@@ -47,4 +44,3 @@ document.getElementById("back-button").onclick = () => {
     document.getElementById("game-viewer").style.display = "none";
     document.getElementById("game-frame").src = "";
 };
-
