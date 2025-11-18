@@ -31,12 +31,12 @@ const games = [
         url: "games/cappyclicker.html"
     },
                 {
-        name: "Basket Stars",
+        name: "Doge Miner 2",
         thumb: "img/basketstars.png",
         url: "games/basketstars.html"
     },
                {
-        name: "FNAF 1",
+        name: "FNAF",
         thumb: "img/deltarune.png",
         url: "games/deltar.html"
     }
@@ -88,6 +88,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
