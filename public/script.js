@@ -34,6 +34,11 @@ const games = [
         name: "Basket Stars",
         thumb: "img/basketstars.png",
         url: "games/basketstars.html"
+    },
+               {
+        name: "Deltarune",
+        thumb: "img/deltar.png",
+        url: "games/deltar.html"
     }
     
 ];
@@ -83,5 +88,6 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
