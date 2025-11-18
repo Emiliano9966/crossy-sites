@@ -37,7 +37,7 @@ const games = [
     },
                {
         name: "Deltarune",
-        thumb: "img/deltar.png",
+        thumb: "img/deltarune.png",
         url: "games/deltar.html"
     }
     
@@ -88,6 +88,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
