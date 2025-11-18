@@ -1,8 +1,8 @@
 // Your games list
 const games = [
     {
-        name: "Game Recommendation Form",
-        thumb: "img/grf.png",
+        name: "Add a Game",
+        thumb: "img/grf.jpg",
         url: "games/grf.html"
     },
         {
@@ -77,3 +77,4 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
