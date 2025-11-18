@@ -29,7 +29,13 @@ const games = [
         name: "Capybara Clicker",
         thumb: "img/cappyclicker.png",
         url: "games/cappyclicker.html"
-        }
+    },
+                {
+        name: "Basket Stars",
+        thumb: "img/basketstars.png",
+        url: "games/basketstars.html"
+    }
+    
 ];
 
 // Build game cards automatically
@@ -77,4 +83,5 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
