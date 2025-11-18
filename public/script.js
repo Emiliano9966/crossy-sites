@@ -36,9 +36,9 @@ const games = [
         url: "games/basketstars.html"
     },
                {
-        name: "FNAF",
-        thumb: "img/deltarune.png",
-        url: "games/deltar.html"
+        name: "Moto X3M",
+        thumb: "img/motox3.png",
+        url: "games/motox3.html"
     }
     
 ];
@@ -88,6 +88,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
