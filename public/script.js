@@ -1,9 +1,9 @@
 // Your games list
 const games = [
     {
-        name: "Capybara Clicker",
-        thumb: "img/cappyclicker.png",
-        url: "games/cappyclicker.html"
+        name: "Game Recommendation Form",
+        thumb: "img/grf.png",
+        url: "games/grf.html"
     },
         {
         name: "Monkey Mart",
@@ -24,9 +24,12 @@ const games = [
         name: "Basket Random",
         thumb: "img/bsr.png",
         url: "games/bsr.html"
-    }
-    
-    
+    },
+     {
+        name: "Capybara Clicker",
+        thumb: "img/cappyclicker.png",
+        url: "games/cappyclicker.html"
+  
 ];
 
 // Build game cards automatically
@@ -74,3 +77,4 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
