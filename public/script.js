@@ -36,7 +36,7 @@ const games = [
         url: "games/basketstars.html"
     },
                {
-        name: "Deltarune",
+        name: "FNAF 1",
         thumb: "img/deltarune.png",
         url: "games/deltar.html"
     }
@@ -88,6 +88,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
