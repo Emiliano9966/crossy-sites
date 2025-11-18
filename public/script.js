@@ -25,11 +25,11 @@ const games = [
         thumb: "img/bsr.png",
         url: "games/bsr.html"
     },
-     {
+        {
         name: "Capybara Clicker",
         thumb: "img/cappyclicker.png",
         url: "games/cappyclicker.html"
-  
+        }
 ];
 
 // Build game cards automatically
@@ -77,4 +77,3 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
-
