@@ -49,6 +49,11 @@ const games = [
         name: "Snow Rider",
         thumb: "img/bts.png",
         url: "games/bts.html"
+    },
+                    {
+        name: "FnF",
+        thumb: "img/fnf(1).png",
+        url: "games/fnf.html"
     }
     
 ];
@@ -98,6 +103,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
