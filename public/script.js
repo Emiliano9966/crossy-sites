@@ -44,6 +44,11 @@ const games = [
         name: "Drive Mad",
         thumb: "img/2048.png",
         url: "games/2048.html"
+    },
+                    {
+        name: "BadTime Simulator",
+        thumb: "img/bts.png",
+        url: "games/bts.html"
     }
     
 ];
@@ -93,6 +98,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
