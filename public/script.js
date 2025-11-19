@@ -52,7 +52,7 @@ const games = [
     },
                     {
         name: "FnF",
-        thumb: "img/fnf(1).png",
+        thumb: "img/fnf.png",
         url: "games/fnf.html"
     }
     
@@ -103,6 +103,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
