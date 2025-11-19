@@ -54,6 +54,11 @@ const games = [
         name: "FnF",
         thumb: "img/fnf.png",
         url: "games/fnf.html"
+    },
+                    {
+        name: "Hardware Tycoon",
+        thumb: "img/hrt.png",
+        url: "games/hrt.html"
     }
     
 ];
@@ -103,6 +108,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
