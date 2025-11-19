@@ -46,7 +46,7 @@ const games = [
         url: "games/2048.html"
     },
                     {
-        name: "Bad Time Sim",
+        name: "Snow Rider",
         thumb: "img/bts.png",
         url: "games/bts.html"
     }
@@ -98,6 +98,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
