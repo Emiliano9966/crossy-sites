@@ -41,7 +41,7 @@ const games = [
         url: "games/motox3.html"
     },
                 {
-        name: "2048",
+        name: "Drive Mad",
         thumb: "img/2048.png",
         url: "games/2048.html"
     }
@@ -93,6 +93,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
