@@ -46,9 +46,9 @@ const games = [
         url: "games/2048.html"
     },
                     {
-        name: "Snow Rider",
-        thumb: "img/bts.png",
-        url: "games/bts.html"
+        name: "Sushi Cat",
+        thumb: "img/scat.png",
+        url: "games/scat.html"
     },
                     {
         name: "FnF",
@@ -103,6 +103,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
