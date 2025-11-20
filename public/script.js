@@ -69,6 +69,11 @@ const games = [
         name: "Sonic Revert",
         thumb: "img/srevert.png",
         url: "games/srevert.html"
+     },  
+                    {
+        name: "House of Hazards",
+        thumb: "img/hoh.png",
+        url: "games/hoh.html"
     }
     
 ];
@@ -118,6 +123,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
