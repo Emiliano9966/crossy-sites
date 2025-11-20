@@ -74,6 +74,11 @@ const games = [
         name: "Gun Spin",
         thumb: "img/gunspin.png",
         url: "games/gunspin.html"
+                        
+      },            {
+        name: "Test",
+        thumb: "img/rawahh.png",
+        url: "games/srevert.html"
 
 
     }
@@ -125,6 +130,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
