@@ -64,11 +64,6 @@ const games = [
         name: "OVO",
         thumb: "img/ovo.png",
         url: "games/ovo.html"
-                    
-    },              {
-        name: "Sonic Revert",
-        thumb: "img/srevert.png",
-        url: "games/srevert.html"
                         
      },             {
         name: "Cookie Clicker",
@@ -124,6 +119,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
