@@ -69,6 +69,12 @@ const games = [
         name: "Cookie Clicker",
         thumb: "img/cookieclick.png",
         url: "games/cookieclick.html"
+                        
+     },             {
+        name: "Gun Spin",
+        thumb: "img/gunspin.png",
+        url: "games/gunspin.html"
+
 
     }
     
@@ -119,6 +125,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
