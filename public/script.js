@@ -73,11 +73,13 @@ const games = [
      },             {
         name: "Gun Spin",
         thumb: "img/gunspin.png",
-        url: "games/gunspin.html",
-
-
+        url: "games/gunspin.html",                     
+    },
+                    {
+        name: "Infinite Craft",
+        thumb: "img/inf.png",
+        url: "games/inf.html",
     }
-    
 ];
 
 // Build game cards automatically
@@ -125,6 +127,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
