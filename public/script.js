@@ -67,7 +67,7 @@ const games = [
                     
       },            {
         name: "Sonic Revert",
-        thumb: "img/s512x512.png",
+        thumb: "img/srevert.png",
         url: "games/srevert.html"
     }
     
@@ -118,6 +118,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
