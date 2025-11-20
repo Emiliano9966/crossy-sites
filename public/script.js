@@ -59,11 +59,11 @@ const games = [
         name: "Hardware Tycoon",
         thumb: "img/hrt.png",
         url: "games/hrt.html"
-    }      
+    },  
                     {
         name: "OVO",
-        thumb: "img/OVO.png",
-        url: "games/OVO.html"
+        thumb: "img/ovo.png",
+        url: "games/ovo.html"
     }
     
 ];
@@ -113,6 +113,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
