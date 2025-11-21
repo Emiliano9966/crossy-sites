@@ -79,6 +79,11 @@ const games = [
         name: "Infinite Craft",
         thumb: "img/inf.png",
         url: "games/inf.html",
+    },
+                    {
+        name: "Escape Road",
+        thumb: "img/er.png",
+        url: "games/er.html",
     }
 ];
 
@@ -127,6 +132,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
