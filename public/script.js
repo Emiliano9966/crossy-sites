@@ -1,115 +1,88 @@
-// Games list
+// Your games list
 const games = [
     {
         name: "Add a Game",
         thumb: "img/grf.jpg",
-        url: "games/grf.html",
-        isRecommended: false,
-        thumb2: "img/grf_banner.webp"
+        url: "games/grf.html"
     },
-    {
+        {
         name: "Monkey Mart",
         thumb: "img/monkeymart.webp",
-        url: "games/monkeymart.html",
-        isRecommended: true,
-        thumb2: "img/monkeymarth.png"
+        url: "games/monkeymart.html"
     },
-    {
+            {
         name: "Retro Bowl",
         thumb: "img/retrobowl.png",
-        url: "games/retrobowl.html",
-        isRecommended: false,
-        thumb2: "img/retrobowl_banner.webp"
+        url: "games/retrobowl.html"
     },
-    {
+                {
         name: "Ragdoll Archers",
         thumb: "img/arc.png",
-        url: "games/arc.html",
-        isRecommended: false,
-        thumb2: ""
+        url: "games/arc.html"
     },
-    {
+                {
         name: "Basket Random",
         thumb: "img/bsr.png",
-        url: "games/bsr.html",
-        isRecommended: false
+        url: "games/bsr.html"
     },
-    {
+        {
         name: "Capybara Clicker",
         thumb: "img/cappyclicker.png",
-        url: "games/cappyclicker.html",
-        isRecommended: true,
-        thumb2: "img/cappyclickerh.png"
+        url: "games/cappyclicker.html"
     },
-    {
+                {
         name: "Doge Miner 2",
         thumb: "img/basketstars.png",
-        url: "games/basketstars.html",
-        isRecommended: false
+        url: "games/basketstars.html"
     },
-    {
+               {
         name: "Moto X3M",
         thumb: "img/motox3.png",
-        url: "games/motox3.html",
-        isRecommended: false
+        url: "games/motox3.html"
     },
-    {
+                {
         name: "Drive Mad",
         thumb: "img/2048.png",
-        url: "games/2048.html",
-        isRecommended: false,
-        thumb2: "img/drive_banner.webp"
+        url: "games/2048.html"
     },
-    {
+                    {
         name: "Sushi Cat",
         thumb: "img/scat.png",
-        url: "games/scat.html",
-        isRecommended: false
+        url: "games/scat.html"
     },
-    {
+                    {
         name: "FnF",
         thumb: "img/fnf.png",
-        url: "games/fnf.html",
-        isRecommended: false
+        url: "games/fnf.html"
     },
-    {
+                    {
         name: "Hardware Tycoon",
         thumb: "img/hrt.png",
-        url: "games/hrt.html",
-        isRecommended: false
-    },
-    {
+        url: "games/hrt.html"
+    },  
+                    {
         name: "OVO",
         thumb: "img/ovo.png",
-        url: "games/ovo.html",
-        isRecommended: false,
-        thumb2: "img/ovo_banner.webp"
-    },
-    {
+        url: "games/ovo.html"
+                        
+     },             {
         name: "Cookie Clicker",
         thumb: "img/cookieclick.png",
-        url: "games/cookieclick.html",
-        isRecommended: false
-    },
-    {
+        url: "games/cookieclick.html"
+                        
+     },             {
         name: "Gun Spin",
         thumb: "img/gunspin.png",
-        url: "games/gunspin.html",
-        isRecommended: true,
-        thumb2: "img/gunspinh.png"
+        url: "games/gunspin.html",                     
     },
-    {
+                    {
         name: "Tiny Fishing",
         thumb: "img/gn.png",
         url: "games/gn.html",
-        isRecommended: true,
-        thumb2: "img/tinyfishingh.png"
-    },
+    }
 ];
 
-// =========================
-// Build Game Grid
-// =========================
+// Build game cards automatically
 window.onload = () => {
     const container = document.getElementById("gameContainer");
 
@@ -125,48 +98,9 @@ window.onload = () => {
 
         container.appendChild(card);
     });
-
-    startRecommendedSlider();
 };
 
-// =========================
-// Recommended Banner Rotator
-// =========================
-
-const recGames = games.filter(g => g.isRecommended && g.thumb2);
-let recIndex = 0;
-
-function showRecommended() {
-    const g = recGames[recIndex];
-
-    const img = document.getElementById("recImage");
-    const name = document.getElementById("recName");
-
-    img.classList.remove("fadeIn");
-    img.classList.add("fadeOut");
-
-    setTimeout(() => {
-        img.src = g.thumb2;
-        name.innerText = g.name;
-
-        img.onclick = () => openGame(g.name, g.url, g.thumb);
-
-        img.classList.remove("fadeOut");
-        img.classList.add("fadeIn");
-    }, 300);
-
-    recIndex = (recIndex + 1) % recGames.length;
-}
-
-function startRecommendedSlider() {
-    showRecommended();
-    setInterval(showRecommended, 3000); // rotate every 3s
-}
-
-// =========================
-// Game Screen open/close
-// =========================
-
+// Open game screen
 function openGame(name, url, icon) {
     document.getElementById("gameList").style.display = "none";
     document.getElementById("gameScreen").style.display = "block";
@@ -175,6 +109,7 @@ function openGame(name, url, icon) {
     document.getElementById("bottomIcon").src = icon;
     document.getElementById("gameFrame").src = url;
 
+    // Sidebar population
     const side = document.getElementById("sidebarGames");
     side.innerHTML = "";
 
@@ -186,12 +121,9 @@ function openGame(name, url, icon) {
     });
 }
 
+// Close game
 function closeGame() {
     document.getElementById("gameScreen").style.display = "none";
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
-
-
-
-
