@@ -84,7 +84,12 @@ const games = [
         name: "Escape Road",
         thumb: "img/er.png",
         url: "games/er.html",
-    }
+    },
+                    {
+        name: "Gun Night",
+        thumb: "img/inf.png",
+        url: "games/gn.html",
+    },
 ];
 
 // Build game cards automatically
@@ -132,6 +137,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
