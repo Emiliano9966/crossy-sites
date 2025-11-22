@@ -76,11 +76,6 @@ const games = [
         url: "games/gunspin.html",                     
     },
                     {
-        name: "Infinite Craft",
-        thumb: "img/inf.png",
-        url: "games/inf.html",
-    },
-                    {
         name: "Tiny Fishing",
         thumb: "img/gn.png",
         url: "games/gn.html",
@@ -132,6 +127,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
