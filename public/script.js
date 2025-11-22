@@ -95,7 +95,8 @@ const games = [
         name: "Gun Spin",
         thumb: "img/gunspin.png",
         url: "games/gunspin.html",
-        isRecommended: false
+        isRecommended: true,
+        thumb2: "img/gunspinh.png"
     },
     {
         name: "Tiny Fishing",
@@ -190,6 +191,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
