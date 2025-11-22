@@ -42,7 +42,6 @@ body {
 /* Scale on hover (same vibe as sidebar) */
 .game-card:hover img {
     transform: scale(1.13);
-    filter: brightness(1.15);
 }
 
 /* --- NAME TEXT ANIMATION --- */
