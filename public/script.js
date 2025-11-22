@@ -12,7 +12,7 @@ const games = [
         thumb: "img/monkeymart.webp",
         url: "games/monkeymart.html",
         isRecommended: true,
-        thumb2: "img/monkeymart_banner.webp"
+        thumb2: "img/monkeymarth.png"
     },
     {
         name: "Retro Bowl",
@@ -39,7 +39,7 @@ const games = [
         thumb: "img/cappyclicker.png",
         url: "games/cappyclicker.html",
         isRecommended: true,
-        thumb2: "img/cappy_banner.webp"
+        thumb2: "img/cappyclickerh.png"
     },
     {
         name: "Doge Miner 2",
@@ -102,7 +102,7 @@ const games = [
         thumb: "img/gn.png",
         url: "games/gn.html",
         isRecommended: true,
-        thumb2: "img/gn_banner.webp"
+        thumb2: "img/tinyfishingh.png"
     },
 ];
 
@@ -190,5 +190,6 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
