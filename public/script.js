@@ -18,7 +18,7 @@ const games = [
         name: "Retro Bowl",
         thumb: "img/retrobowl.png",
         url: "games/retrobowl.html",
-        isRecommended: true,
+        isRecommended: false,
         thumb2: "img/retrobowl_banner.webp"
     },
     {
@@ -57,7 +57,7 @@ const games = [
         name: "Drive Mad",
         thumb: "img/2048.png",
         url: "games/2048.html",
-        isRecommended: true,
+        isRecommended: false,
         thumb2: "img/drive_banner.webp"
     },
     {
@@ -190,3 +190,4 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
