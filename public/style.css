@@ -15,21 +15,55 @@ body {
     font-weight: 600;
 }
 
+/* --- GRID LAYOUT --- */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, 120px);
-    gap: 18px;
+    gap: 24px;
 }
 
+/* --- CARD CONTAINER --- */
 .game-card {
-    background: #1a1a1e;
-    border-radius: 12px;
-    padding: 10px;
-    text-align: center;
+    position: relative;
+    width: 110px;
+    height: 110px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: transform 0.25s ease;
 }
-.game-card:hover { background: #222229; }
+
+/* --- ICON IMAGE --- */
+.game-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Scale on hover (same vibe as sidebar) */
+.game-card:hover img {
+    transform: scale(1.13);
+    filter: brightness(1.15);
+}
+
+/* --- NAME TEXT ANIMATION --- */
+.game-card span {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none; /* prevents blocking hover */
+}
+
+/* Name slides up + fades in */
+.game-card:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .game-card img {
     width: 100%;
