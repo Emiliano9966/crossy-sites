@@ -156,3 +156,65 @@ iframe {
     font-size: 14px;
 }
 
+/* === Recommended Slider === */
+#recommendedSection {
+    padding: 25px 30px;
+    margin-bottom: 20px;
+}
+
+.rec-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Wrapper */
+.rec-wrapper {
+    width: 100%;
+    max-width: 820px;
+    height: 250px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.rec-wrapper:hover {
+    transform: scale(1.02);
+}
+
+/* Horizontal image */
+.rec-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s, transform 0.5s;
+    border-radius: 14px;
+}
+
+/* Game name overlay */
+.rec-name {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    padding: 6px 14px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Slide animation */
+.fadeOut {
+    opacity: 0;
+    transform: scale(1.02);
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: scale(1);
+}
+
