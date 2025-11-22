@@ -81,13 +81,8 @@ const games = [
         url: "games/inf.html",
     },
                     {
-        name: "Escape Road",
-        thumb: "img/er.png",
-        url: "games/er.html",
-    },
-                    {
-        name: "Gun Night",
-        thumb: "img/inf.png",
+        name: "Tiny Fishing",
+        thumb: "img/gn.png",
         url: "games/gn.html",
     },
 ];
@@ -137,6 +132,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
