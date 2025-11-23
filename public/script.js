@@ -84,12 +84,7 @@ const games = [
         name: "Eggy Car",
         thumb: "img/eggy.png",
         url: "games/eggy.html",
-    },
-                    {
-        name: "Jelly Run 2048",
-        thumb: "img/jelly20.png",
-        url: "games/jelly20.html",
-    },
+    }
 ];
 
 // Build game cards automatically
@@ -137,5 +132,6 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
