@@ -79,11 +79,6 @@ const games = [
         name: "Tiny Fishing",
         thumb: "img/gn.png",
         url: "games/gn.html",
-    },
-                    {
-        name: "Eggy Car",
-        thumb: "img/eggy.png",
-        url: "games/eggy.html",
     }
 ];
 
@@ -132,6 +127,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
