@@ -79,6 +79,11 @@ const games = [
         name: "Tiny Fishing",
         thumb: "img/gn.png",
         url: "games/gn.html",
+    },
+                    {
+        name: "Money Clicker",
+        thumb: "img/moneyg.png",
+        url: "games/moneyg.html",
     }
 ];
 
@@ -127,6 +132,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
