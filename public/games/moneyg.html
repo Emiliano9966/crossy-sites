@@ -1,47 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Gun Clicker - Standalone</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Count Masters: FINAL CLOAKED BYPASS</title>
     <style>
-        body { margin: 0; background: #000; overflow: hidden; }
-        #unity-container { width: 100vw; height: 100vh; }
-        #unity-canvas { width: 100%; height: 100%; }
+        /* Force fullscreen iframe and remove margins */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background-color: #0C0D14;
+        }
+        iframe { 
+            display: block; 
+            border: none; 
+        }
     </style>
 </head>
 <body>
-    <div id="unity-container">
-        <canvas id="unity-canvas"></canvas>
-    </div>
-
-    <!-- Direct Unity loader from source files -->
-    <script src="https://files.crazygames.com/money-gun-clicker/3/Build/Money Gun Clicker - Crazy Games V1.0.loader.js"></script>
-    <script>
-        var config = {
-            dataUrl: "https://files.crazygames.com/money-gun-clicker/3/Build/b83f291a673033306c7a1e42fc017b1a.data.br",
-            frameworkUrl: "https://files.crazygames.com/money-gun-clicker/3/Build/f9d95c13089d536110b6838b8c9b1fe2.js.br",
-            codeUrl: "https://files.crazygames.com/money-gun-clicker/3/Build/4f3c213cab0ee4917f6c0e8555a32927.wasm.br",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "Money Gun Clicker",
-            productVersion: "1.0",
-            // Add progress handling if needed
-            showProgress: true
-        };
-
-        var container = document.querySelector("#unity-container");
-        var canvas = document.querySelector("#unity-canvas");
-
-        createUnityInstance(canvas, config, (progress) => {
-            // Optional: Handle loading progress here
-            console.log(`Progress: ${progress.full}%`);
-        }).then((unityInstance) => {
-            // Game loaded
-            console.log("Unity loaded");
-        }).catch((message) => {
-            console.error(message);
-        });
-    </script>
+    <iframe src="https://games-crazygames-com.translate.goog/en_US/count-masters-stickman-games/index.html?isNewUser=false&v=1.345&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp" 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            allowfullscreen>
+    </iframe>
 </body>
 </html>
