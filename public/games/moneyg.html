@@ -3,29 +3,55 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Count Masters: FINAL CLOAKED BYPASS</title>
+    <title>Count Masters: FINAL BYPASS</title>
     <style>
-        /* Force fullscreen iframe and remove margins */
-        body, html { 
+        /* Forces the game canvas to fill the whole window */
+        body, html {
             margin: 0; 
             padding: 0; 
-            height: 100%; 
             width: 100%; 
+            height: 100%; 
             overflow: hidden; 
-            background-color: #0C0D14;
+            background: #13141E;
         }
-        iframe { 
-            display: block; 
-            border: none; 
+        #unity-container {
+            width: 100%; 
+            height: 100%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        #unity-canvas {
+            width: 100%; 
+            height: 100%; 
         }
     </style>
 </head>
 <body>
-    <iframe src="https://games-crazygames-com.translate.goog/en_US/count-masters-stickman-games/index.html?isNewUser=false&v=1.345&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp" 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            allowfullscreen>
-    </iframe>
+    <div id="unity-container">
+        <canvas id="unity-canvas" width="960" height="600" style="background: #13141E"></canvas>
+    </div>
+
+    <script src="https://files-crazygames-com.translate.goog/count-masters-stickman-games/14/Build/bb0d9ecdb05db3e84da20bd14a4f84dc.loader.js?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp"></script>
+
+    <script>
+        var unityConfig = {
+            // Main Game Data and Code Assets
+            dataUrl: "https://files-crazygames-com.translate.goog/count-masters-stickman-games/14/Build/fc3d0e2f3ede6b21d68d1bdcf09897f0.data.br?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp",
+            codeUrl: "https://files-crazygames-com.translate.goog/count-masters-stickman-games/14/Build/7805ef551878df264897388db901cd8b.wasm.br?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp",
+            frameworkUrl: "https://files-crazygames-com.translate.goog/count-masters-stickman-games/14/Build/61c3111a617f5704892207f850018243.framework.js.br?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp",
+            streamingAssetsUrl: "https://files-crazygames-com.translate.goog/count-masters-stickman-games/14/StreamingAssets?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp",
+
+            // Standard Unity Configuration (can be left as-is)
+            companyName: "Hyper Casual",
+            productName: "Count Masters: Stickman Games",
+            productVersion: "1.0",
+        };
+
+        var canvas = document.querySelector("#unity-canvas");
+        
+        // Load the game instance
+        createUnityInstance(canvas, unityConfig);
+    </script>
 </body>
 </html>
