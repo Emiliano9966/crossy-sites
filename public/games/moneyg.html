@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Idle Mining Empire - TEXTURE FIX</title>
+    <title>Idle Mining Empire - API BYPASS FIX</title>
     
     <base href="https://3352cd9b-19b5-406c-bff7-cafba1519f27.poki-gdn.com/e2e0a985-ae42-4530-869e-2690d302879d/">
 
@@ -15,10 +15,37 @@
     <link rel="preload" href="texture-0.png" as="image">
     <link rel="preload" href="texture-1.png" as="image">
 
+    <script>
+        window.Poki = {
+            API: {
+                // The game is likely checking for an 'enabled' or 'initialized' state.
+                enabled: true,
+                // The game is often waiting for a 'gameLoadingFinished' call to proceed past the splash screen.
+                gameLoadingFinished: function() { 
+                    console.log("Poki API Bypass: gameLoadingFinished called successfully.");
+                },
+                // Add other common dummy functions the game might call
+                commercialBreak: function(callback) { callback({ success: true }); },
+                rewardedBreak: function(callback) { callback({ success: true, reason: "dummy" }); },
+                gameplayStart: function() {},
+                gameplayStop: function() {},
+                setDebug: function() {},
+                isAdBlocked: function() { return false; }
+            }
+        };
+        // The game often checks if the window is being framed (iframe check)
+        window.isPoki = true; 
+        
+        // Some games use this legacy wrapper call
+        if (typeof(Poki) === 'undefined') {
+            window.Poki = {};
+        }
+    </script>
+
     <script type="text/javascript" src="game.js"></script>
 
     <style>
-        /* Force fullscreen display and minimal styling for the game */
+        /* CSS remains the same */
         html, body {
             margin: 0;
             padding: 0;
