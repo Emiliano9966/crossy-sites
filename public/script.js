@@ -81,7 +81,7 @@ const games = [
         url: "games/gn.html",
     },
                     {
-        name: "Money Clicker",
+        name: "Idle Miner",
         thumb: "img/moneyg.png",
         url: "games/moneyg.html",
     }
@@ -132,6 +132,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
