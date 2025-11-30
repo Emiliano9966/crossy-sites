@@ -1,81 +1,58 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Idle Mining Empire - API BYPASS FIX</title>
-    
-    <base href="https://3352cd9b-19b5-406c-bff7-cafba1519f27.poki-gdn.com/e2e0a985-ae42-4530-869e-2690d302879d/">
 
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no, minimal-ui"/>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    
-    <link rel="icon" type="image/x-icon" href="media/graphics/misc/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="game.css">
+<!-- Ultimate Game Stash file--> 
+<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
 
-    <link rel="preload" href="texture-0.png" as="image">
-    <link rel="preload" href="texture-1.png" as="image">
+
+</style></head><body dir="ltr"><script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/UnityProgress.js"></script><script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.js"></script><script type="text/javascript">
+      var gameInstance;
+
+      window.onload = function () {
+        gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.json", {
+          onProgress: UnityProgress,
+          Module: {
+            onRuntimeInitialized: function () {
+              UnityProgress(gameInstance, "complete");
+            },
+          },
+        });
+      };
+    </script>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; position: relative; background: rgb(0, 0, 0);"><canvas id="#canvas" style="width: 100%; height: 100%; cursor: default;" width="1018" height="926"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-firestore.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1login.js?v=2"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firestore.js"></script>
 
     <script>
-        window.Poki = {
-            API: {
-                // The game is likely checking for an 'enabled' or 'initialized' state.
-                enabled: true,
-                // The game is often waiting for a 'gameLoadingFinished' call to proceed past the splash screen.
-                gameLoadingFinished: function() { 
-                    console.log("Poki API Bypass: gameLoadingFinished called successfully.");
-                },
-                // Add other common dummy functions the game might call
-                commercialBreak: function(callback) { callback({ success: true }); },
-                rewardedBreak: function(callback) { callback({ success: true, reason: "dummy" }); },
-                gameplayStart: function() {},
-                gameplayStop: function() {},
-                setDebug: function() {},
-                isAdBlocked: function() { return false; }
-            }
-        };
-        // The game often checks if the window is being framed (iframe check)
-        window.isPoki = true; 
-        
-        // Some games use this legacy wrapper call
-        if (typeof(Poki) === 'undefined') {
-            window.Poki = {};
+      initializeFireBase();
+
+      function showAds() {
+        console.log("show ads");
+      }
+      function requestNewAd() {
+        // Show video ad
+        unityAdFinishedCallback();
+      }
+      function unityAdFinishedCallback() {
+        try {
+          if (gameInstance) gameInstance.SendMessage("AdsManager", "OnWebCallback");
+        } catch (error) {
+          console.log(error);
         }
+      }
     </script>
+  
 
-    <script type="text/javascript" src="game.js"></script>
 
-    <style>
-        /* CSS remains the same */
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            height: 100%;
-            width: 100%;
-            background-color: #000;
-        }
-        #ajaxbar {
-            width: 100%;
-            height: 100%;
-        }
-        #game {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #canvas {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-</head>
 
-<body onload="setTimeout(function(){window.scrollTo(0,1)},1);">
-    <div id="ajaxbar">
-        <div id="game"><canvas id="canvas"></canvas></div>
-    </div> 
-</body>
-</html>
+
+
+
+</script><script src="blob:https://gotlgsogl-opensocial.googleusercontent.com/43fddd1c-53cc-4d6d-88c5-93762d972e03" id="a96bf7f9ec45ce9224c9b5b9b42b17b2"></script></body></html>
