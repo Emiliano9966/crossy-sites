@@ -1,47 +1,79 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-  <title>Eggy Car - Unblocked by Proxy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Basic layout to make the iframe fill the whole window */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    /* 1. Ensure HTML and Body take up the entire viewport */
-    body, html { 
-        height: 100%; 
-        background: #111; /* Dark background for a sleek look */
-        overflow: hidden; 
-        font-family: 'Inter', sans-serif;
-    }
-    /* 2. Ensure the container takes up 100% of the body's space */
-    .container {
-        width: 100%;
-        height: 100%; /* Important: This now fills 100% of body's height */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    /* 3. Set the iframe to 100% of its parent container */
-    iframe { 
-      width: 100%; /* Changed from 95% to 100% */
-      height: 100%; /* Changed from 95vh to 100% */
-      border: none; /* Removed border to eliminate gap and achieve true fill */
-      border-radius: 0; /* Removed border-radius */
-      background: #000;
-      box-shadow: none; /* Removed box-shadow */
-    }
-  </style>
+
+  <title>Eggy Car - Unblocked by Proxy</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+  /* Basic layout to make the iframe fill the whole window */
+  * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+  
+  body, html { 
+    height: 100%; 
+    background: #111;
+    overflow: hidden; /* CRITICAL: Prevents scroll bars */
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .container {
+    /* CRITICAL: Use position relative to contain the absolutely positioned iframe */
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    display: block; /* Use block to simplify flex/centering conflict */
+  }
+  
+  iframe { 
+    /* CRITICAL: Position Absolute ensures it fills the container exactly */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    border: none;
+    border-radius: 0;
+    background: #000;
+  }
+</style>
+
 </head>
+
 <body>
 
-  <div class="container">
-    <iframe 
-        src="https://crossysites.emilianocabralcerroni.workers.dev/" 
-        allowfullscreen 
-        allow="fullscreen"
-    ></iframe>
-  </div>
+
+
+  <div class="container">
+
+    <!-- 
+
+      The iframe source is set to your Cloudflare Worker URL 
+
+      followed by the original path to the Eggy Car game assets.
+
+    -->
+
+    <iframe 
+
+        src="https://crossysites.emilianocabralcerroni.workers.dev/" 
+
+        allowfullscreen 
+
+        allow="fullscreen"
+
+    ></iframe>
+
+  </div>
+
+
 
 </body>
+
 </html>
