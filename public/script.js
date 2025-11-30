@@ -81,8 +81,8 @@ const games = [
         url: "games/gn.html",
     },
                     {
-        name: "Idle Miner",
-        thumb: "img/moneyg.png",
+        name: "1v1.lol",
+        thumb: "img/1v1.png",
         url: "games/moneyg.html",
     }
 ];
@@ -132,6 +132,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
