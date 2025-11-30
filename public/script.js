@@ -84,6 +84,11 @@ const games = [
         name: "1v1.lol",
         thumb: "img/1v1.png",
         url: "games/moneyg.html",
+    },
+                    {
+        name: "Eggy car",
+        thumb: "img/eggycarfr.png",
+        url: "games/eggycarfr.html",
     }
 ];
 
@@ -132,6 +137,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
