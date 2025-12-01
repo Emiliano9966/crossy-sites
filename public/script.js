@@ -89,6 +89,11 @@ const games = [
         name: "Eggy car",
         thumb: "img/eggycar.png",
         url: "games/eggycarfr.html",
+    },
+                    {
+        name: "Gulper.io",
+        thumb: "img/gulper.png",
+        url: "games/gulper.html",
     }
 ];
 
@@ -137,6 +142,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
