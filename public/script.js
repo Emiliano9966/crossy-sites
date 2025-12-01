@@ -26,7 +26,7 @@ const games = [
         url: "games/bsr.html"
     },
         {
-        name: "Capybara Clicker",
+        name: "Capybara Clicker 2",
         thumb: "img/cappyclicker.png",
         url: "games/cappyclicker.html"
     },
@@ -137,6 +137,7 @@ function closeGame() {
     document.getElementById("gameList").style.display = "block";
     document.getElementById("gameFrame").src = "";
 }
+
 
 
 
